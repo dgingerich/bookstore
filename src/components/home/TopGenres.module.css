@@ -1,0 +1,21 @@
+
+.genre-tiles-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.genre-tile {
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-tile:hover,
+.genre-tile:focus {
+    cursor: pointer;
+    transform: scale(1.05);
+}
