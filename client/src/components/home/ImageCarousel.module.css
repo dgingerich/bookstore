@@ -1,0 +1,56 @@
+.carouselContainer {
+    margin: auto 5%;
+    text-align: center;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.leftArrow {
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+    z-index: 10;
+}
+
+.rightArrow {
+    width: 30px;
+    height: 30px;
+    background-color:lightcoral;
+    z-index: 10;
+}
+
+.leftArrow:hover, .rightArrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.leftArrow:active, .rightArrow:active {
+    transform: scale(0.95);
+}
+
+.carousel {
+    width: 90%;
+    margin: auto 5%;
+    display: flex; 
+    white-space: nowrap;
+    column-gap: 10%;
+    transition: transform .5s ease-in-out;
+    grid-column: 2;
+}
+
+
+.carouselImage {
+    /* imageWidth = 20 - ((5/8) * margin) */
+    width: 12%;
+    min-width: 12%;
+    height: 250px;
+}
+
+.carouselImage:hover {
+    cursor: pointer;
+}
+
+.carouselImage:active {
+    transform: scale(0.95);
+}

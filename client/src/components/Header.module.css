@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+
+.container {
+    display: grid;
+    height: 12vh;
+    padding: 0 5%;
+    margin: 0;
+    background-color: gray;
+    align-content: center;
+}
+
+.container > * {
+    align-self: center;
+}
+
+.container > div > * {
+    text-decoration: none;
+    color: black;
+}
+
+h4 {
+    width: min-content;
+}
+
+h4:hover, h4:focus {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h4:active {
+    transform: scale(0.95);
+}
+
+
+.logo {
+    grid-column: 1;
+}
+
+.browse {
+    grid-column: 2;
+}
+
+.fiction {
+    grid-column: 3;
+}
+
+.nonfiction {
+    grid-column: 4;
+}
+
+.shoppingCart {
+    grid-column: 5;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+}

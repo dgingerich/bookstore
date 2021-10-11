@@ -1,0 +1,78 @@
+{
+  "books": [
+    {
+      "title": "Frankenstein",
+      "author": {
+        "firstName": "Mary",
+        "lastName": "Shelley"
+      },
+      "summary": "In this classic work of gothic fiction, the titular scientist harnesses the forces of nature to create a monster, known only as 'The Creature'. Who is truly the monster: creator or creation?",
+      "releaseDate": "1 January 1818",
+      "pages": "280",
+      "genres": ["Fiction", "Gothic Fiction", "Horror", "Science Fiction", "Classic"],
+      "productID": 1,
+      "cover": "/assets/bookcovers/frankenstein.jpg"
+    }, {
+      "title": "Alice's Adventures in Wonderland",
+      "author": {
+        "firstName": "Lewis",
+        "lastName": "Carroll"
+      },
+      "summary": "A young girl named Alice enters a fantastic world where rabbits talk, tea parties are full of riddles, and packs of playing cards are truly royal courts.",
+      "releaseDate": "26 November 1865",
+      "pages": "112",
+      "genres": ["Fiction", "Fantasy", "Literary Nonsense", "Children's Stories", "Classic"],
+      "productID": 2,
+      "cover": "/assets/bookcovers/alices-adventures-in-wonderland.jpg"
+    }, {
+      "title": "The Great Gatsby",
+      "author": {
+        "firstName": "F.",
+        "middleName": "Scott",
+        "lastName": "Fitzgerald"
+      },
+      "summary": "The mysterious Gatsby engages in an affair of passion and excess during the Roaring Twenties, told through the eyes of Gatsby's friend, Nick.",
+      "releaseDate": "10 April 1925",
+      "pages": "165",
+      "genres": ["Fiction", "Tragedy", "Romance", "Classic"],
+      "productID": 3,
+      "cover": "/assets/bookcovers/the-great-gatsby.jpg"
+    }, {
+      "title": "Anna Karenina",
+      "author": {
+        "firstName": "Leo",
+        "lastName": "Tolstoy"
+      },
+      "summary": "A story of several noble families in Imperial Russia - their love, their hate, their desires, and the social fabric from which they can find no escape.",
+      "releaseDate": "10 April 1925",
+      "pages": "836",
+      "genres": ["Fiction", "Tragedy", "Romance", "Russian Fiction", "Classic"],
+      "productID": 4,
+      "cover": "/assets/bookcovers/anna-karenina.jpg"
+    }, {
+      "title": "Hamlet, Prince of Denmark",
+      "author": {
+        "firstName": "William",
+        "lastName": "Shakespeare"
+      },
+      "summary": "One man puts on a play and contemplates life after his father is murdered. Everyone dies.",
+      "releaseDate": "1600",
+      "pages": "112",
+      "genres": ["Fiction", "Tragedy", "Drama", "Classic"],
+      "productID": 5,
+      "cover": "/assets/bookcovers/hamlet-prince-of-denmark.jpg"
+    }, {
+      "title": "Dracula",
+      "author": {
+        "firstName": "Bram",
+        "lastName": "Stoker"
+      },
+      "summary": "When they're not too busy complimenting each other, a group of bumbling idiots plot to keep an elderly Romanian from immigrating to London.",
+      "releaseDate": "26 May 1897",
+      "pages": "418",
+      "genres": ["Fiction", "Gothic Fiction", "Overrated"],
+      "productID": 6,
+      "cover": "/assets/bookcovers/dracula.jpg"
+    }
+  ]
+}
