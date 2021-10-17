@@ -1,8 +1,7 @@
-import Book from '../models/bookMessage.js';
+import Book from '../models/book.js';
 
 export const getBooks = async (req, res) => {
     try {
-        console.log('hello world')
         const books = await Book.find();
         res.status(200).json(books)
     } catch (error) {
@@ -11,9 +10,10 @@ export const getBooks = async (req, res) => {
 }
 
 export const createBook = async (req, res) => {
+    
     const book = req.body;
 
-    const newBook = new BookMessage(book)
+    const newBook = new Book(book)
 
     try {
         await newBook.save();

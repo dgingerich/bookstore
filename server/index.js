@@ -7,9 +7,12 @@ import bookRoutes from './routes/books.js'
 
 const app = express();
 
+app.use(bodyParser.json({ limit: '30mb', extended: true }))
+app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
+app.use(cors());
+
 app.use('/books', bookRoutes)
 
-app.use(cors());
 
 const CONNECTION_URL = 'mongodb+srv://ynnad:M0ng0DB@cluster0.i4yfb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.port || 5000;

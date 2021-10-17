@@ -39,18 +39,9 @@
     grid-column: 2;
 }
 
-
 .carouselImage {
     /* imageWidth = 20 - ((5/8) * margin) */
     width: 12%;
     min-width: 12%;
-    height: 250px;
-}
-
-.carouselImage:hover {
-    cursor: pointer;
-}
-
-.carouselImage:active {
-    transform: scale(0.95);
+    height: fit-content;
 }

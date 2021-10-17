@@ -1,12 +1,12 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import styles from './Slideshow.module.css'
 
 export const Slideshow = ({ width, timeout }) => {
 
     const slides = ['mistyrose', 'chocolate', 'darkslategray']
-    const [index, setIndex] = React.useState(0)
+    const [index, setIndex] = useState(0)
 
-    React.useEffect(() => {
+    useEffect(() => {
         setTimeout(() => setIndex(index === slides.length - 1 ? 0 : index + 1), timeout)
     })
 
