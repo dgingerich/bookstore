@@ -1,0 +1,12 @@
+.refinementBarContainer {
+    width: 20%;
+    padding-right: 15%;
+}
+
+.refinementBarContainer > * {
+    margin-bottom: 15px;
+    border-bottom: solid;
+    border-width: 1px;
+    padding-bottom: 15px;
+    width: 100%;
+}

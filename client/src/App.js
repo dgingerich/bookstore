@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { getBooks } from './actions/books';
 import { getGenres } from './actions/genres';
@@ -10,12 +10,10 @@ import Main from './components/Main';
 const App = () => {
 
   const dispatch = useDispatch();
-  const state = useSelector((state) => state);
 
   useEffect(() => {
     dispatch(getBooks());
     dispatch(getGenres());
-    console.log(state);
   }, [dispatch]);
 
   return (
