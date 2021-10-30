@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
-import styles from './Book.module.css'
+import styles from './BookCard.module.css'
 
-export const Book = ({ productID }) => {
+export const BookCard = ({ productID }) => {
 
     const [book, setBook] = useState({
         title: "Book Title",
-        author: {
-            firstName: "First Name",
-            lastName: "Last Name"
-        },
+        author: "",
         summary: "Summary",
         releaseDate: "1 January 1818",
         pages: "280",
@@ -27,10 +25,7 @@ export const Book = ({ productID }) => {
             let bookData = books.find((obj) => obj.productID === productID);
             setBook({
                 title: bookData.title,
-                author: {
-                    firstName: bookData.author.firstName,
-                    lastName: bookData.author.lastName
-                },
+                author: bookData.author,
                 summary: bookData.summary,
                 releaseDate: bookData.releaseDate,
                 pages: bookData.pages,
@@ -44,6 +39,12 @@ export const Book = ({ productID }) => {
     }, [books, productID]);
 
     return (
-        <img className={styles.bookImage} src={book.cover} alt='Book Cover'></img>
+        <div className={styles.bookCardContainer}>
+            <div className={styles.bookImageContainer}>
+                <NavLink to={`/Book/${productID}`} className={styles.navLink}><img className={styles.bookImage} src={book.cover} alt='Book Cover'></img></NavLink>
+            </div>
+            <NavLink to={`/Book/${productID}`} className={styles.navLink}><h4 className={styles.bookTitle}>{book.title}</h4></NavLink>
+            <h5 className={styles.bookAuthor}>{book.author}</h5>
+        </div>
     )
 }

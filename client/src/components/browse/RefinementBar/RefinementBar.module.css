@@ -10,3 +10,9 @@
     padding-bottom: 15px;
     width: 100%;
 }
+
+.refinementBarContainer > h2 {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
+    font-size: 1.3em;
+}

@@ -10,11 +10,7 @@ export const RefinementBar = ( {toggleActive} ) => {
 
     const [refinements, setRefinements] = useState({
         fictionSubgenres : [],
-        nonfictionSubgenres : [],
-        length : {
-            lowerBound : null,
-            upperBound : null
-        }
+        nonfictionSubgenres : []
     });
 
     useEffect(() => {
@@ -27,6 +23,7 @@ export const RefinementBar = ( {toggleActive} ) => {
     
     return (
         <div className={styles.refinementBarContainer}>
+            <h2>Genre</h2>
             <RefinementSection sectionTitle="Fiction" section="fictionSubgenres" options={refinements.fictionSubgenres} toggleActive={toggleActive}></RefinementSection>
             <RefinementSection sectionTitle="Nonfiction" section="nonfictionSubgenres" options={refinements.nonfictionSubgenres} toggleActive={toggleActive}></RefinementSection>
         </div>

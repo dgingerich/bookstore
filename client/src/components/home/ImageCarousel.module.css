@@ -44,4 +44,5 @@
     width: 12%;
     min-width: 12%;
     height: fit-content;
+    white-space: normal;
 }

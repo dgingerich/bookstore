@@ -13,9 +13,15 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5%;
+    row-gap: 3em;
 }
 
 .bookContainer {
     width: 50%;
+}
+
+.booksContainer > h2 {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-family);
+    font-style: italic;
 }

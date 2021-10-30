@@ -1,16 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 .header {
     display: flex;
+    justify-content: space-between;
 }
 
 .sectionTitle {
+    font-family: var(--text-font-family);
+    font-weight: 400;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+    background: transparent;
+    border-style: none;
     cursor: pointer;
 }
 
 .checkmark {
     cursor: pointer;
+    margin-right: 1em;
 }
 
 .expandedIndicator {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    display: inline-block;
+    background: transparent;
+    border-style: none;
+    cursor: pointer;
 }
 
 li {

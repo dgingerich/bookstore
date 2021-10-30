@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './RefinementOption.module.css';
 
-export const RefinementOption = ({option, section, sectionChecked, toggleActive}) => {
-    
+export const RefinementOption = ({ option, section, sectionChecked, toggleActive }) => {
+
     //Default is for all options to be available
     const [checked, setChecked] = useState(true);
 
@@ -27,7 +27,10 @@ export const RefinementOption = ({option, section, sectionChecked, toggleActive}
 
     return (
         <>
-        <button onClick={handleOnChange}><input className={styles.checkmark} type="checkbox" checked={checked}/> {option}</button>
+            <button className={styles.optionButton} onClick={handleOnChange}>
+                <input className={styles.checkmark} type="checkbox" checked={checked} />
+                {option}
+            </button>
         </>
     )
 }

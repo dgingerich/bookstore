@@ -10,7 +10,7 @@ export const RefinementSection = ({ sectionTitle, section, options, toggleActive
     const [expanded, setExpanded] = useState(true);
 
     //Toggling checked sets all sub options equal to checked
-    const [checked, setChecked] = useState(true);
+    const [checked, setChecked] = useState(false);
 
     return (
         <div>

@@ -5,7 +5,7 @@
     height: 12vh;
     padding: 0 5%;
     margin: 0;
-    background-color: gray;
+    background-color: slategray;
     align-content: center;
 }
 
@@ -18,16 +18,16 @@
     color: black;
 }
 
-h4 {
+.navLink {
     width: min-content;
 }
 
-h4:hover, h4:focus {
+.navLink:hover, .navLink:focus {
     cursor: pointer;
     text-decoration: underline;
 }
 
-h4:active {
+.navLink:active {
     transform: scale(0.95);
 }
 
@@ -52,7 +52,7 @@ h4:active {
     grid-column: 5;
 }
 
-h1 {
+.title {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
 }

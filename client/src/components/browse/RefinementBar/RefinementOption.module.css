@@ -1,6 +1,16 @@
-button {
+.optionButton {
     display: inline-block;
     background: transparent;
     border-style: none;
     cursor: pointer;
+    font-family: var(--text-font-family);
+    font-weight: 400;
+}
+
+.checkmark {
+    margin-right: 1em;
+}
+
+.checkmark:hover {
+    cursor: pointer;   
 }

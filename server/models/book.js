@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const bookSchema = mongoose.Schema({
     title: String,
-    author: {firstName: String, lastName: String},
+    author: String,
     summary: String,
     releaseDate: String,
     pages: String,

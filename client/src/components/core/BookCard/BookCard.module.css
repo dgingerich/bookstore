@@ -1,0 +1,42 @@
+.bookCardContainer {
+    height: 100%;
+    text-align: center;
+}
+
+.bookImage {
+    width: 100%;
+    height: fit-content;
+    margin-top: 0;
+}
+
+.bookImage:hover {
+    cursor: pointer;
+}
+
+.bookImage:hover {
+    transform: scale(0.95);
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.bookTitle {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
+    font-size: 1.25em;
+    color: black;
+    margin-top: .5em;
+}
+
+.bookTitle:hover {
+    text-decoration: underline;
+}
+
+.bookAuthor {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
+    font-size: 1em;
+    text-decoration: underline;
+    margin-top: .75em;
+}

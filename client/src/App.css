@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
 *::-webkit-scrollbar {
     display: none;
 }
@@ -5,4 +7,10 @@
 * {
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    --text-font-family: 'Open Sans', sans-serif;
+    --text-font-weight: 'normal';
+
+    --title-font-family: 'Times New Roman', Times, serif;
+    --title-font-weight: 100;
 }
