@@ -15,29 +15,12 @@ export const Browse = () => {
         nonfictionSubgenres: []
     });
 
+    //Visible books are refined when refinements changes
     const [refinedBooks, setRefinedBooks] = useState([]);
 
-    //RefinementType: fictionSubgenres, nonfictionSubgenres, length
-    //Refinement: individual element in respective RefinementType
-    const toggleActive = (refinementType, refinement) => {
-
-        setRefinements((refinements) => {
-            //refinementTypeArray is deep copy of value of refinementType in state
-            let refinementTypeArray = [...refinements[refinementType]];
-
-            refinementTypeArray.indexOf(refinement) > -1
-                ? refinementTypeArray.splice(refinementTypeArray.indexOf(refinement), 1)
-                : refinementTypeArray.push(refinement);
-
-            return { ...refinements, [refinementType]: refinementTypeArray };
-        });
-
-    };
-
-    //Visible books are refined when refinements changes
     useEffect(() => {
         setRefinedBooks(refineBooks());
-    }, [refinements])
+    }, [refinements, books])
 
     const refineBooks = () => {
 
@@ -47,8 +30,6 @@ export const Browse = () => {
         let tempRefinedBooks = refineGenres();
 
         return tempRefinedBooks;
-
-
     }
 
     const refineGenres = () => {
@@ -86,7 +67,8 @@ export const Browse = () => {
 
     return (
         <div className={styles.browseContainer}>
-            <RefinementBar refinements={refinements} toggleActive={toggleActive} />
+            <RefinementBar refinements={refinements} setRefinements={setRefinements}/>
+
             <div className={styles.booksContainer}>
                 <h2>Browse our collection</h2>
                 <div className={styles.booksGrid}>

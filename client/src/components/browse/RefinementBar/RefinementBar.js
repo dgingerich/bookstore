@@ -1,31 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import {useSelector} from 'react-redux'
+import React from 'react';
 
 import styles from './RefinementBar.module.css';
 import RefinementSection from './RefinementSection';
 
-export const RefinementBar = ( {toggleActive} ) => {
+export const RefinementBar = ( {refinements, setRefinements} ) => {
 
-    const genres = useSelector((state) => state.genresReducer);
-
-    const [refinements, setRefinements] = useState({
-        fictionSubgenres : [],
-        nonfictionSubgenres : []
-    });
-
-    useEffect(() => {
-        try {
-            setRefinements({...refinements, fictionSubgenres : genres.find((obj) => obj.type === "Fiction").subgenres, 
-            nonfictionSubgenres : genres.find(obj => obj.type === "Nonfiction").subgenres});
-        } catch (error) {
-        }
-    }, [genres]);
-    
     return (
         <div className={styles.refinementBarContainer}>
             <h2>Genre</h2>
-            <RefinementSection sectionTitle="Fiction" section="fictionSubgenres" options={refinements.fictionSubgenres} toggleActive={toggleActive}></RefinementSection>
-            <RefinementSection sectionTitle="Nonfiction" section="nonfictionSubgenres" options={refinements.nonfictionSubgenres} toggleActive={toggleActive}></RefinementSection>
+            <RefinementSection sectionTitle="Fiction" section="fictionSubgenres" refinements={refinements} setRefinements={setRefinements}></RefinementSection>
+            <RefinementSection sectionTitle="Nonfiction" section="nonfictionSubgenres" refinements={refinements} setRefinements={setRefinements}></RefinementSection>
         </div>
     )
 }
