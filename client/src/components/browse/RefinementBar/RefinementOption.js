@@ -29,7 +29,7 @@ export const RefinementOption = ({ option, section, sectionChecked, toggleActive
         <>
             <button className={styles.optionButton} onClick={handleOnChange}>
                 <input className={styles.checkmark} type="checkbox" checked={checked} />
-                {option}
+                <div>{option}</div>
             </button>
         </>
     )

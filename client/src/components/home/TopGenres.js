@@ -3,15 +3,16 @@ import styles from './TopGenres.module.css'
 
 export const TopGenres = () => {
 
-    const topGenreList = ['Classics', 'Fantasy', 'Romance']
+    const topGenreList = ['Literature', 'Fantasy & Science Fiction', 'Romance', 'History']
+
+    const tileColors = ['plum', 'powderblue','mistyrose', 'burlywood']
 
     return (
         <div>
-            <div className={styles["genre-tiles-container"]}>
+            <div className={styles.genreTilesContainer}>
                 {topGenreList.map((genre, index) => {
-                    return <div className={styles["genre-tile"]} key={index}><p>{genre}</p></div>
+                    return <div className={styles.genreTile} style={{backgroundColor: tileColors[index]}} key={index}><p>{genre}</p></div>
                 })}
-                <div className={styles["genre-tile"]}><p>More...</p></div>
             </div>
         </div>
     )

@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import styles from './Slide.module.css';
 
-export const Slide = ( {productID} ) => {
+export const Slide = ({ productID }) => {
 
     const books = useSelector(state => state.booksReducer);
     const [book, setBook] = useState({
         title: '',
-        author: {firstName: '', lastName: ''},
+        author: { firstName: '', lastName: '' },
         summary: '',
         releaseDate: '',
         pages: '',
@@ -26,14 +27,10 @@ export const Slide = ( {productID} ) => {
     }, [books]);
 
     return (
-        <div className={styles.slide} style={{ backgroundColor: 'peachpuff' }}>
-            <div className={styles.slideContent}>
-                <img className={styles.bookCover} src={book.cover} alt='Book Cover' />
-                <h4 className={styles.bookTitle}>{book.title}</h4>
-                {book.author.firstName !== undefined && <h4 className={styles.authorFirstName}>{book.author.firstName}</h4>}
-                {book.author.middleName !== undefined && <h4 className={styles.authorMiddleName}>{book.author.middleName}</h4>}
-                {book.author.lastName !== undefined && <h4 className={styles.authorLastName}>{book.author.lastName}</h4>}
-            </div>
+        <div className={styles.slideContainer}>
+                <NavLink to={`/Book/${productID}`} className={styles.navLink}>
+                    <img className={styles.slide} src={`/assets/slides/${book.cover}`}></img>
+                </NavLink>
         </div>
     )
 }

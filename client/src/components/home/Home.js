@@ -7,15 +7,18 @@ import styles from './Home.module.css'
 export const Home = () => {
     return (
         <>
-            <Slideshow width="100%" timeout="3000" productIDs={[3, 5, 6, 7]}/>
+
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <Slideshow width="90%" timeout="6000" productIDs={[2, 3, 6]} />
+            </div>
             <div style={{ margin: 'auto 5%' }}>
-                <h2 className={styles.subtitle}>Explore by genre</h2>
+                <h2 className={styles.subtitle}>Explore our top genres!</h2>
                 <TopGenres />
                 <h2 className={styles.subtitle}> Bestsellers </h2>
-                <ImageCarousel productIDs={[1, 2, 3, 4, 5, 6, 7, 8]}/>
+                <ImageCarousel productIDs={[1, 2, 3, 4, 5, 6, 7, 8]} />
                 <h2 className={styles.subtitle}> Read it before you watch it</h2>
                 <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                    <Slideshow width="50%" timeout="3000" productIDs={[2, 3, 6]}/>
+                    <Slideshow width="50%" timeout="3000" productIDs={[2, 3, 6]} />
                 </div>
             </div>
         </>

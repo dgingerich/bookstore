@@ -1,6 +1,8 @@
-import {useState} from 'react'
-import styles from './ImageCarousel.module.css'
-import {BookCard} from '../core/BookCard/BookCard'
+import {useState} from 'react';
+import styles from './ImageCarousel.module.css';
+import {BookCard} from '../core/BookCard/BookCard';
+import {KeyboardArrowLeft, KeyboardArrowRight} from '@material-ui/icons';
+
 
 export const ImageCarousel = ({ width, productIDs }) => {
 
@@ -19,13 +21,13 @@ export const ImageCarousel = ({ width, productIDs }) => {
 
     return (
         <div className={styles.carouselContainer} style={{ width: `${width}` }}>
-            <div className={styles.leftArrow} onClick={() => {incrementCarousel(-1)}}></div>
+            <div className={styles.leftArrow} onClick={() => {incrementCarousel(-1)}}><KeyboardArrowLeft/></div>
             <div className={styles.carousel} style={{ transform: `translate3d(${index * -22}%, 0, 0)` }}>
                 {productIDs.map((productID, key) => {
                     return <div className={styles.carouselImage} key={key}><BookCard productID={productID} /></div>
                 })}
             </div>
-            <div className={styles.rightArrow} onClick={() => {incrementCarousel(1)}}></div>
+            <div className={styles.rightArrow} onClick={() => {incrementCarousel(1)}}><KeyboardArrowRight/></div>
         </div>
     )
 }

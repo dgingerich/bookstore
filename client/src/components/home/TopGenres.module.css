@@ -1,21 +1,27 @@
 
-.genre-tiles-container {
+.genreTilesContainer {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.genre-tile {
+.genreTile {
     display: flex;
     width: 10vw;
     height: 10vw;
-    background-color: aqua;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.genre-tile:hover,
-.genre-tile:focus {
+.genreTile:hover,
+.genreTile:focus {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+
+.genreTile > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0 10%;
 }

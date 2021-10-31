@@ -1,12 +1,19 @@
 .optionButton {
+    text-align: left;
     display: inline-block;
     background: transparent;
     border-style: none;
     cursor: pointer;
     font-family: var(--text-font-family);
     font-weight: 400;
+    display: flex;
+    align-items:center;
 }
 
+.optionButton > * {
+    display: inline-block;
+    margin-top: .75em;
+}
 .checkmark {
     margin-right: 1em;
 }

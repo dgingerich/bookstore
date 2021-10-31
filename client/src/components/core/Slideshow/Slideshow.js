@@ -19,8 +19,7 @@ export const Slideshow = ({ width, timeout, productIDs }) => {
             <div className={styles.slidesContainer} style={{ transform: `translate3d(${index * -100}%, 0, 0)` }}>
                 {typeof (books.find((obj) => obj.productID === productIDs[0])) !== 'undefined' &&
                     productIDs.map((productID, key) => {
-
-                        return <Slide productID={productID} key={key}/>
+                        return <Slide className={styles.slide} productID={productID} key={key}/>
                     })
                 }
             </div>

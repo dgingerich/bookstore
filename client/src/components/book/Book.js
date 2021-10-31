@@ -41,7 +41,7 @@ export const Book = ({ match }) => {
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>
-                <img src={book.cover} alt='Book Cover'></img>
+                <img src={`/assets/bookcovers/${book.cover}`} alt='Book Cover'></img>
             </div>
             <div className={styles.bookHeader}>
                 <h1>{book.title}</h1>
@@ -65,10 +65,6 @@ export const Book = ({ match }) => {
                                     return <h4 className={styles.genres} key={key}>{genre}</h4>
                                 })}
                             </td>
-                        </tr>
-                        <tr>
-                            <th>ProductID:</th>
-                            <td>{productID}</td>
                         </tr>
                     </tbody>
                 </table>

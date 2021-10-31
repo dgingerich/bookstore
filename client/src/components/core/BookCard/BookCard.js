@@ -14,7 +14,7 @@ export const BookCard = ({ productID }) => {
         pages: "280",
         genres: [],
         productID: 0,
-        cover: "/assets/bookcovers/frankenstein.jpg"
+        cover: "frankenstein.jpg"
     });
 
     const books = useSelector((state) => state.booksReducer);
@@ -41,7 +41,7 @@ export const BookCard = ({ productID }) => {
     return (
         <div className={styles.bookCardContainer}>
             <div className={styles.bookImageContainer}>
-                <NavLink to={`/Book/${productID}`} className={styles.navLink}><img className={styles.bookImage} src={book.cover} alt='Book Cover'></img></NavLink>
+                <NavLink to={`/Book/${productID}`} className={styles.navLink}><img className={styles.bookImage} src={`/assets/bookcovers/${book.cover}`} alt='Book Cover'></img></NavLink>
             </div>
             <NavLink to={`/Book/${productID}`} className={styles.navLink}><h4 className={styles.bookTitle}>{book.title}</h4></NavLink>
             <h5 className={styles.bookAuthor}>{book.author}</h5>

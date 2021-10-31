@@ -1,9 +1,9 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import Home from './home/Home'
-import Browse from './browse/Browse'
-import Book from './book/Book'
+import Home from './home/Home';
+import Browse from './browse/Browse';
+import Book from './book/Book';
 
 export const Main = () => {
 

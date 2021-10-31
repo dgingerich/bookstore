@@ -15,14 +15,15 @@ export const RefinementSection = ({ sectionTitle, section, options, toggleActive
     return (
         <div>
             <div className={styles.header}>
+
                 <button onClick={() => setChecked(!checked)} className={styles.sectionTitle}>
-                    <input className={styles.checkmark} type="checkbox" checked={checked}/> 
+                    <input className={styles.checkmark} type="checkbox" checked={checked} />
                     {sectionTitle}
                 </button>
 
                 <button className={styles.expandedIndicator} onClick={() => setExpanded(!expanded)}>{expanded ? '-' : '+'}</button>
             </div>
-            <ul style={{ display: `${expanded ? 'inline-block' : 'none'}`}}>
+            <ul style={{ display: `${expanded ? 'inline-block' : 'none'}` }}>
                 {options.map((option, key) => {
                     return <li key={key}><RefinementOption option={option} section={section} sectionChecked={checked} toggleActive={toggleActive}></RefinementOption></li>
                 })}

@@ -9,14 +9,12 @@
 .leftArrow {
     width: 30px;
     height: 30px;
-    background-color: cadetblue;
     z-index: 10;
 }
 
 .rightArrow {
     width: 30px;
     height: 30px;
-    background-color:lightcoral;
     z-index: 10;
 }
 
