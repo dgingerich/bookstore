@@ -5,10 +5,11 @@ import styles from './Browse.module.css';
 import RefinementBar from './RefinementBar/RefinementBar';
 import { BookCard } from '../core/BookCard/BookCard'
 
-export const Browse = () => {
+export const Browse = ({ match }) => {
 
     //will need store state with all possible genres
     const books = useSelector((state) => state.booksReducer);
+    const genres = useSelector((state) => state.genresReducer);
     //will need local state containing refinement options that is passed up from RefinementBar
     const [refinements, setRefinements] = useState({
         fictionSubgenres: [],
@@ -17,6 +18,33 @@ export const Browse = () => {
 
     //Visible books are refined when refinements changes
     const [refinedBooks, setRefinedBooks] = useState([]);
+
+    //This refines based on URL parameters
+    //First parameter is the genre (fiction, nonfiction), second parameter is subgenre (horror, history)
+    //Can only have one genre parameter, can have multiple subgenre parameters
+    useEffect(() => {
+
+            switch (match.params.genres) {
+                case 'Fiction':
+                    if (match.params.subgenres !== undefined) {
+                        setRefinements({ ...refinements, fictionSubgenres: match.params.subgenres.toString().split('&&'), nonfictionSubgenres: []});
+                    } else {
+                        setRefinements({ ...refinements, fictionSubgenres: genres.find((obj) => obj.type === 'fictionSubgenres').subgenres, nonfictionSubgenres: [] })
+                    }
+                    break;
+                case 'Nonfiction':
+                    if (match.params.subgenres !== undefined) {
+                        setRefinements({ ...refinements, nonfictionSubgenres: match.params.subgenres.toString().split('&&'), fictionSubgenres: [] });
+                    } else {
+                        setRefinements({ ...refinements, nonfictionSubgenres: genres.find((obj) => obj.type === 'nonfictionSubgenres').subgenres, fictionSubgenres: [] })
+                    }
+                    break;
+                default:
+                    setRefinements({...refinements, nonfictionSubgenres: [], fictionSubgenres: []});
+                    break;
+            }
+
+    }, [match, genres])
 
     useEffect(() => {
         setRefinedBooks(refineBooks());
@@ -67,7 +95,7 @@ export const Browse = () => {
 
     return (
         <div className={styles.browseContainer}>
-            <RefinementBar refinements={refinements} setRefinements={setRefinements}/>
+            <RefinementBar refinements={refinements} setRefinements={setRefinements} />
 
             <div className={styles.booksContainer}>
                 <h2>Browse our collection</h2>

@@ -66,6 +66,10 @@ export const Book = ({ match }) => {
                                 })}
                             </td>
                         </tr>
+                        <tr>
+                            <th>Release Date:</th>
+                            <td>{book.releaseDate}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

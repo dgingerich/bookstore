@@ -32,7 +32,7 @@ export const RefinementOption = ({ option, section, refinements, setRefinements 
     return (
         <>
             <button className={styles.optionButton} onClick={handleOnClick}>
-                <input className={styles.checkmark} type="checkbox" checked={checked} />
+                <input className={styles.checkmark} type="checkbox" checked={checked} readOnly/>
                 <div>{option}</div>
             </button>
         </>

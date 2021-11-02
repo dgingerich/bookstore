@@ -12,7 +12,7 @@ export const Home = () => {
                 <Slideshow width="90%" timeout="6000" productIDs={[2, 3, 6]} />
             </div>
             <div style={{ margin: 'auto 5%' }}>
-                <h2 className={styles.subtitle}>Explore our top genres!</h2>
+                <h2 className={styles.subtitle}>Explore new worlds!</h2>
                 <TopGenres />
                 <h2 className={styles.subtitle}> Bestsellers </h2>
                 <ImageCarousel productIDs={[1, 2, 3, 4, 5, 6, 7, 8]} />

@@ -56,3 +56,12 @@
     font-family: 'Playfair Display', serif;
     font-size: 3em;
 }
+
+.shoppingCart > button {
+    border-style: none;
+    background-color: transparent;
+}
+
+.shoppingCart > button:hover {
+    cursor: pointer;
+}

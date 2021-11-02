@@ -43,7 +43,7 @@ export const RefinementSection = ({ sectionTitle, section, refinements, setRefin
             <div className={styles.header}>
 
                 <button onClick={handleOnClick} className={styles.sectionTitle}>
-                    <input className={styles.checkmark} type="checkbox" checked={checked} />
+                    <input className={styles.checkmark} type="checkbox" checked={checked} readOnly/>
                     {sectionTitle}
                 </button>
 
