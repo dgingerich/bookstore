@@ -2,6 +2,7 @@
   "name": "bookstore",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://127.0.0.1/bookstore",
   "proxy": "http://209.151.154.118:4445",
   "dependencies": {
     "@material-ui/core": "^4.12.3",

@@ -28,8 +28,8 @@ export const Slide = ({ productID }) => {
 
     return (
         <div className={styles.slideContainer}>
-                <NavLink to={`/Book/${productID}`} className={styles.navLink}>
-                    <img className={styles.slide} src={`/assets/slides/${book.cover}`}></img>
+                <NavLink to={`${process.env.PUBLIC_URL}/Book/${productID}`} className={styles.navLink}>
+                    <img className={styles.slide} src={`${process.env.PUBLIC_URL}/assets/slides/${book.cover}`}></img>
                 </NavLink>
         </div>
     )

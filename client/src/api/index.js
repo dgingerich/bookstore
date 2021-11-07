@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://209.151.154.118:4445/books';
+const url = 'https://www.dannygingerich.com/api/books';
 
 export const fetchBooks = () => axios.get(url);
 

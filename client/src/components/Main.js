@@ -9,9 +9,9 @@ export const Main = () => {
 
     return (
         <Switch>
-            <Route exact path='/' component={Home}></Route>
-            <Route exact path='/browse/:genres?/:subgenres?' component={Browse}></Route>
-            <Route exact path='/book/:productID' component={Book}></Route>
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}></Route>
+            <Route exact path={`${process.env.PUBLIC_URL}/browse/:genres?/:subgenres?`} component={Browse}></Route>
+            <Route exact path={`${process.env.PUBLIC_URL}/book/:productID`} component={Book}></Route>
         </Switch>
     );
 }

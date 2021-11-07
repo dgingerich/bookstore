@@ -41,7 +41,7 @@ export const Book = ({ match }) => {
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>
-                <img src={`/assets/bookcovers/${book.cover}`} alt='Book Cover'></img>
+                <img src={`${process.env.PUBLIC_URL}/assets/bookcovers/${book.cover}`} alt='Book Cover'></img>
             </div>
             <div className={styles.bookHeader}>
                 <h1>{book.title}</h1>

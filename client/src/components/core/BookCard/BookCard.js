@@ -41,9 +41,9 @@ export const BookCard = ({ productID }) => {
     return (
         <div className={styles.bookCardContainer}>
             <div className={styles.bookImageContainer}>
-                <NavLink to={`/Book/${productID}`} className={styles.navLink}><img className={styles.bookImage} src={`/assets/bookcovers/${book.cover}`} alt='Book Cover'></img></NavLink>
+                <NavLink to={`${process.env.PUBLIC_URL}/Book/${productID}`} className={styles.navLink}><img className={styles.bookImage} src={`${process.env.PUBLIC_URL}/assets/bookcovers/${book.cover}`} alt='Book Cover'></img></NavLink>
             </div>
-            <NavLink to={`/Book/${productID}`} className={styles.navLink}><h4 className={styles.bookTitle}>{book.title}</h4></NavLink>
+            <NavLink to={`${process.env.PUBLIC_URL}/Book/${productID}`} className={styles.navLink}><h4 className={styles.bookTitle}>{book.title}</h4></NavLink>
             <h5 className={styles.bookAuthor}>{book.author}</h5>
         </div>
     )
