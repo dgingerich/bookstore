@@ -1,0 +1,10 @@
+{
+     apps : [
+          {
+               name : "index.js",
+               interpreter: "none",
+               script: "npx",
+               args: "serve -s build -l 4444"
+          }
+    ]
+}
