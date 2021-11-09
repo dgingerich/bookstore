@@ -12,7 +12,7 @@ export const TopGenres = () => {
         <div>
             <div className={styles.genreTilesContainer}>
                 {topGenreList.map((genre, index) => {
-                    return <NavLink to={`/browse/Fiction/${genre.replace(' ', '%20')}`} style={{textDecoration: 'none', color:'black'}}><div className={styles.genreTile} style={{backgroundColor: tileColors[index]}} key={index}><p>{genre}</p></div></NavLink>
+                    return <NavLink to={`${process.env.PUBLIC_URL}/browse/Fiction/${genre.replace(' ', '%20')}`} style={{textDecoration: 'none', color:'black'}}><div className={styles.genreTile} style={{backgroundColor: tileColors[index]}} key={index}><p>{genre}</p></div></NavLink>
                 })}
             </div>
         </div>
